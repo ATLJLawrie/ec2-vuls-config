@@ -45,12 +45,12 @@ func DescribeInstances(tag Tag) ([]*ec2.Instance, error) {
 					aws.String("running"),
 				},
 			},
-			{
-				Name: aws.String(tag.Name),
-				Values: []*string{
-					aws.String(tag.Values),
-				},
-			},
+		//	{
+		//		Name: aws.String("platform"),
+		//		Values: []*string{
+		//			aws.String("Windows"),
+		//		},
+		//	},
 		},
 	}
 	resp, err := svc.DescribeInstances(params)

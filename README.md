@@ -39,7 +39,7 @@ $ export AWS_REGION=us-west-2
 
 ~~e.g.~~
 
-#### Hard coded to use Platform: Linux tag
+#### Hard coded to ignore tag - uses all running machines with Platform != Windows
 
 
 ~~Name: web-server-1~~
