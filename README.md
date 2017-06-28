@@ -8,18 +8,19 @@ ec2-vuls-config is useful cli to create config file for [Vuls](https://github.co
 ### 1. Installation
 
 ```
-$ go get -u github.com/ohsawa0515/ec2-vuls-config
+$ go get -u github.com/ATLJLawrie/ec2-vuls-config
 ```
 
 ### 2. Set AWS credentials
- 
-* Credential file (`$HOME/.aws/credentials`) 
+
+* Credential file (`$HOME/.aws/credentials`)
 
 ```
 [default]
 aws_access_key_id = <YOUR_ACCESS_KEY_ID>
 aws_secret_access_key = <YOUR_SECRET_ACCESS_KEY>
 ```
+OR
 
 * Environment variable
 
@@ -31,17 +32,19 @@ $ export AWS_SECRET_ACCESS_KEY=YOUR_SECRET_ACCESS_KEY
 ### 3. Set AWS region
 
 ```
-$ export AWS_REGION=us-east-1
+$ export AWS_REGION=us-west-2
 ```
 
-### 4. Set the `Name` and `Vuls-Scan` tag to EC2 instance that you want to scan
+~~### 4. Set the `Name` and `Vuls-Scan` tag to EC2 instance that you want to scan~~
 
-e.g.
+~~e.g.~~
 
-```
-Name: web-server-1
-Vuls-Scan: True
-```
+#### Hard coded to use Platform: Linux tag
+
+
+~~Name: web-server-1~~
+~~Vuls-Scan: True~~
+
 
 ### 5. Prepare config.toml for Vuls scan
 
@@ -78,7 +81,7 @@ host = "192.0.2.11"
 
 #### --config
 
-Specify the file path to the config.toml (Default: `$PWD/config.toml`). 
+Specify the file path to the config.toml (Default: `$PWD/config.toml`).
 
 e.g.
 
@@ -89,7 +92,7 @@ $ ec2-vuls-config --config path/to/config.toml
 #### --filters
 
 Filtering EC2 instances like [describe-instances command](http://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html).  
-Also, by default, filtering works that status is running, platform is linux and Vuls-Scan=True tag. 
+Also, by default, filtering works that status is running, platform is linux and Vuls-Scan=True tag.
 
 
 e.g.

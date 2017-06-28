@@ -16,7 +16,7 @@ func main() {
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:  "filters, f",
-			Value: "Name=tag:Vuls-Scan,Values=True",
+			Value: "Name=tag:Platform,Values=Linux",
 			Usage: "Filtering ec2 tag",
 		},
 		cli.StringFlag{
