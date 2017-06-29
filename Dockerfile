@@ -1,6 +1,4 @@
-FROM alpine
-
-RUN apk --no-cache add ca-certificates && update-ca-certificates
+FROM centurylink/ca-certs
 
 COPY ec2-vuls-config /ec2-vuls-config
 
