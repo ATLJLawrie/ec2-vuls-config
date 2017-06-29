@@ -79,23 +79,17 @@ host = "192.0.2.11"
 
 ### Options
 
-#### --config
+~~#### --config~~
 
-Specify the file path to the config.toml (Default: `$PWD/config.toml`).
-
-e.g.
-
-```
-$ ec2-vuls-config --config path/to/config.toml
-```
-
-#### --filters
-
-Filtering EC2 instances like [describe-instances command](http://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html).  
-Also, by default, filtering works that status is running, platform is linux and Vuls-Scan=True tag.
+~~Specify the file~~ Hardcoded path to the config.toml (/config/config.toml`).
 
 
-e.g.
+~~#### --filters~~
+
+~~Filtering EC2 instances like [describe-instances command](http://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html).  
+Also, by default, filtering works that status is running, platform is linux and Vuls-Scan=True tag.~~
+
+g.
 
 * To scan all instances with a Vuls-Scan=True tag (Default)
 
