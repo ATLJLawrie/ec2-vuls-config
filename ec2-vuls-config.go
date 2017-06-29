@@ -21,7 +21,7 @@ func main() {
 		},
 		cli.StringFlag{
 			Name:  "config, c",
-			Value: os.Getenv("PWD") + "/config.toml",
+			Value: "/config/config.toml",
 			Usage: "Load configuration from `FILE`",
 		},
 	}
